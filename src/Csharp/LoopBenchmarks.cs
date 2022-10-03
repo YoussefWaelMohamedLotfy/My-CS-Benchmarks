@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 namespace Csharp;
 
 [MemoryDiagnoser(false)]
-public sealed class LoopBenchmarks
+public class LoopBenchmarks
 {
     private static readonly Random randomRange = new(420);
 

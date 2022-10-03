@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using Csharp;
 
-BenchmarkRunner.Run<LoopBenchmarks>();
+BenchmarkRunner.Run<StringConcatenationBenchmarks>();
