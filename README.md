@@ -20,6 +20,11 @@ The Projects should be built in `Release` mode to run on the optimized version o
 Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Contributors
+<a href="https://github.com/YoussefWaelMohamedLotfy/My-CS-Benchmarks/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=YoussefWaelMohamedLotfy/My-CS-Benchmarks" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
