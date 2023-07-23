@@ -3,7 +3,7 @@ using BenchmarkDotNet.Running;
 using Csharp;
 using Elastic.CommonSchema.BenchmarkDotNetExporter;
 
-var options = new ElasticsearchBenchmarkExporterOptions("http://elasticsearch:9200")
+var options = new ElasticsearchBenchmarkExporterOptions("http://localhost:9200")
 {
     GitBranch = "externally-provided-branch",
     GitCommitMessage = "externally provided git commit message",
@@ -11,5 +11,5 @@ var options = new ElasticsearchBenchmarkExporterOptions("http://elasticsearch:92
 };
 
 var exporter = new ElasticsearchBenchmarkExporter(options);
-var config = ManualConfig.CreateMinimumViable().AddExporter(exporter);
+var config = DefaultConfig.Instance.AddExporter(exporter);
 BenchmarkRunner.Run<StringConcatenationBenchmarks>(config);

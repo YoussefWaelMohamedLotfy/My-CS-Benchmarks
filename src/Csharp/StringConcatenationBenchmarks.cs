@@ -1,9 +1,12 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Columns;
+using BenchmarkDotNet.Configs;
 using Microsoft.Extensions.ObjectPool;
 using System.Text;
 
 namespace Csharp;
 
+[Config(typeof(GlobalConfig))]
 [MemoryDiagnoser]
 public class StringConcatenationBenchmarks
 {
@@ -51,5 +54,13 @@ public class StringConcatenationBenchmarks
         }
 
         _stringBuilderPool.Return(sb);
+    }
+
+    private class GlobalConfig : ManualConfig
+    {
+        public GlobalConfig()
+        {
+            SummaryStyle = BenchmarkDotNet.Reports.SummaryStyle.Default.WithRatioStyle(RatioStyle.Percentage);
+        }
     }
 }
