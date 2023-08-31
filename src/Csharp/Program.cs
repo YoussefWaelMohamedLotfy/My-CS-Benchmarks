@@ -12,4 +12,4 @@ var options = new ElasticsearchBenchmarkExporterOptions("http://elasticsearch:92
 
 var exporter = new ElasticsearchBenchmarkExporter(options);
 var config = ManualConfig.CreateMinimumViable().AddExporter(exporter);
-BenchmarkRunner.Run<StringConcatenationBenchmarks>(config);
+BenchmarkRunner.Run<DateTimeBenchmarks>(config);
